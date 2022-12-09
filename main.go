@@ -5,7 +5,6 @@ import (
 	"log"
 	"os"
 	"os/signal"
-	"time"
 
 	"github.com/dropbox/goebpf"
 )
@@ -38,18 +37,14 @@ func main() {
 	ctrlC := make(chan os.Signal, 1)
 	signal.Notify(ctrlC, os.Interrupt)
 
-	fmt.Println("XDP program successfully loaded and attached. Counters refreshed every second.")
+	fmt.Println("XDP program successfully loaded and attached.")
 	fmt.Println("Press CTRL+C to stop.")
 	fmt.Println()
 
-	ticker := time.NewTicker(1 * time.Second)
 	for {
-		select {
-		case <-ticker.C:
-		case <-ctrlC:
-			fmt.Println("\nDetaching program and exit")
-			return
-		}
+		<-ctrlC
+		fmt.Println("\nDetaching program and exit")
+		return
 	}
 }
 
