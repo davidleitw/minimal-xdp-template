@@ -18,7 +18,7 @@ func main() {
 	}
 	printXdpProgramInfo(bpf)
 
-	xdp := bpf.GetProgramByName("xdp_main")
+	xdp := bpf.GetProgramByName("xdp_root")
 	if xdp == nil {
 		log.Fatalln("Program 'xdp_main' not found.")
 	}

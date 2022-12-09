@@ -9,7 +9,7 @@
 #include "../includes/bpf_endian.h"
 
 SEC("xdp")
-int xdp_main(struct xdp_md *ctx)
+int xdp_root(struct xdp_md *ctx)
 {
   void *data = (void *)(long)ctx->data;
   void *data_end = (void *)(long)ctx->data_end;
