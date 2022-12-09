@@ -41,11 +41,8 @@ func main() {
 	fmt.Println("Press CTRL+C to stop.")
 	fmt.Println()
 
-	for {
-		<-ctrlC
-		fmt.Println("\nDetaching program and exit")
-		return
-	}
+	<-ctrlC
+	fmt.Println("\nDetaching program and exit")
 }
 
 func printXdpProgramInfo(bpfProgram goebpf.System) {
