@@ -3,7 +3,7 @@
 `minimalXdpTemplate` is a project for learning xdp, which hopes to provide the simplest xdp program and the main.go that loads the xdp elf file into the kernel, so that users can concentrate on learning xdp as much as possible without dealing with tedious environment settings. This project is suitable for users who want to quickly understand the basics of xdp.
 
 
-In addition, I have also written a Chinese blog introducing the concept of the whole project, see [基於 goebpf 搭建最小化的 xdp 實驗環境]()。
+In addition, I have also written a Chinese blog introducing the concept of the whole project, see [基於 goebpf 搭建最小化的 xdp 實驗環境](https://davidleitw.github.io/posts/xdp_example_01/)。
 
 ### Install prerequisites
 
