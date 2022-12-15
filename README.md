@@ -28,6 +28,14 @@ $ clang -I../includes -O2 -target bpf -c xdp_main.c -o xdp_main.o
 
 This command uses the clang compiler to compile the `xdp_main.c` file, and outputs the compiled file to `xdp_main.o`. The `-I` option specifies the include path, `-O2` specifies the optimization level, and `-target` bpf specifies that the target is a BPF (Berkeley Packet Filter) program.
 
+If you encounter an error when running make, such as "fatal error: 'asm/types.h' file not found," you can try resolving it by installing the gcc-multilib package using the apt package manager. This can be done with the following command:
+
+```
+$ sudo apt install gcc-multilib
+```
+
+After installing the package, you should be able to compile the XDP program successfully.
+
 ### Run it
 
 After compiling the xdp program using the previous command, you can use the following command to load the xdp_main.o file into the kernel:
