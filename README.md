@@ -9,7 +9,7 @@ In addition, I have also written a Chinese blog introducing the concept of the w
 
 ```
 # Install clang/llvm to be able to compile C files into bpf arch
-$ apt-get install clang llvm make
+$ sudo apt install clang llvm make
 ```
 
 ### Compile xdp program
